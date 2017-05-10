@@ -24,9 +24,12 @@ public class ListGetter {
         int[] list = new int[listLength];
 
         for(int i=0; i<listLength; i++) {
+            int index = 1;
+
             temp = scanner.nextInt();
-            System.out.println(""+i+"번쨰 입력 값은 "+temp+" 입니다.");
+            System.out.println(""+index+"번쨰 입력 값은 "+temp+" 입니다.");
             list[i] = temp;
+            index++;
         }
 
         return list;

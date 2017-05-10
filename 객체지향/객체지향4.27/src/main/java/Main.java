@@ -1,33 +1,36 @@
-import View.AskView;
+import View.*;
 
 /**
  * Created by seonghohong on 2017. 4. 27..
  */
 public class Main {
 
+    //질문 클래스
+    private static MenuView menuView = new MenuView();
+    private static AskView askNumView = new AskView();
+
+    //결과 보여주는 클래스
+    private static ViewWork listSumView = new ListSumView();
+    private static ViewWork bigNumView = new BigNumView();
+    private static ViewWork oddNumView = new OddNumView();
+    private static ViewWork evenNumView = new EvenNumView();
+    private static ViewWork sortListView = new SortListView();
+
+    //배열 받아오는 클래스
+    private static ListGetter listGetter = new ListGetter();
+
+    //계산 클래스
+    private static Calculator calculator = new Calculator();
+
     public static void main(String args[]) {
-        controller();
+        setClass();
     }
 
-    public static void controller() {
-        ListGetter listGetter = new ListGetter();
-        AskView view = new AskView();
+    public static void setClass() {
+        MenuController menuController = new MenuController(menuView, askNumView,
+                listSumView, bigNumView, oddNumView, evenNumView, sortListView,
+                listGetter, calculator);
 
-        view.askNum();
-        int listLength = listGetter.getNum();
-        view.askList();
-        int[] numList = listGetter.getList(listLength);
-
-        Calculator calculator = new Calculator();
-
-        int listSum = calculator.getListSum(numList);
-
-        calculator.setOddEvenList(numList);
-        //int[] oddNum = calculator.getOddList();
-        //int[] evenNum = calculator.getEvenList();
-
-        int[] sortList = calculator.getSortList(numList);
-
-        
+        menuController.menuOrder();
     }
 }

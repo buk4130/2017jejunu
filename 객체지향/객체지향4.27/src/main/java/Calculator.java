@@ -7,6 +7,9 @@ public class Calculator {
     private int oddNum;
     private int evenNum;
 
+    private int[] sortList;
+
+
     public int getListSum(int[] numList) {
         for (int i = 0; i < numList.length; i++) {
             listSum = listSum + numList[i];
@@ -15,9 +18,9 @@ public class Calculator {
         return listSum;
     }
 
-    public int[] getSortList(int[] numList) {
+    public void setSortList(int[] numList) {
 
-        int[] sortList = new int[numList.length];
+        sortList = new int[numList.length];
         int randomNumLength = numList.length;
 
         if (numList[0] > numList[1]) {
@@ -47,8 +50,6 @@ public class Calculator {
                 }
             }
         }
-
-        return sortList;
     }
 
     public void setOddEvenList(int[] numList) {
@@ -65,9 +66,10 @@ public class Calculator {
         }
     }
 
-    public int getOddList() {
+    public int getOddNum() {
         return oddNum;
     }
-
-    public int getEvenList() { return evenNum; }
+    public int getEvenNum() { return evenNum; }
+    public int getBigNum() { return sortList[sortList.length-1]; }
+    public int[] getSortList() { return sortList; }
 }

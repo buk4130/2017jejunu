@@ -3,7 +3,7 @@ package View;
 /**
  * Created by seonghohong on 2017. 5. 3..
  */
-public class EvenNumView implements ResultView<Integer>{
+public class EvenNumView extends ViewWork<Integer>{
     private int evenNum;
 
     public void setResult(Integer evenNum) {

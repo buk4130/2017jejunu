@@ -3,7 +3,7 @@ package View;
 /**
  * Created by seonghohong on 2017. 5. 3..
  */
-public class ListSumView  implements ResultView<Integer>{
+public class ListSumView  extends ViewWork<Integer>{
 
     private int listSum;
 
@@ -11,7 +11,5 @@ public class ListSumView  implements ResultView<Integer>{
         this.listSum = listSum;
     }
 
-    public void showResult() {
-        System.out.println("입력하신 숫자들의 합은 "+listSum+" 입니다.");
-    }
+    public void showResult() { System.out.println("리스트의 홀수의 개수는 "+listSum+" 입니다."); }
 }

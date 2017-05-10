@@ -3,7 +3,7 @@ package View;
 /**
  * Created by seonghohong on 2017. 5. 3..
  */
-public class OddNumView implements ResultView<Integer> {
+public class OddNumView extends ViewWork<Integer> {
 
     private int oddNum;
 
@@ -11,7 +11,5 @@ public class OddNumView implements ResultView<Integer> {
         this.oddNum = oddNum;
     }
 
-    public void showResult() {
-        System.out.println("리스트의 홀수의 개수는 "+oddNum+" 입니다.");
-    }
+    public void showResult() { System.out.println("리스트의 홀수의 개수는 "+oddNum+" 입니다."); }
 }
