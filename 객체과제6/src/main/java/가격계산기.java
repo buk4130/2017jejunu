@@ -1,4 +1,4 @@
-import 차림표모델.차림표;
+import 데이터모델.차림표;
 
 /**
  * Created by samsung on 2017-05-10.

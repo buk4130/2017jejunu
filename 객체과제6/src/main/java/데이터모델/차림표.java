@@ -1,4 +1,4 @@
-package 차림표모델;
+package 데이터모델;
 
 /**
  * Created by samsung on 2017-05-10.
