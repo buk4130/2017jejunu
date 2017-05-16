@@ -1,31 +1,35 @@
 /**
  * Created by samsung on 2017-05-14.
  */
-public class neighborListModel {
+public class NeighborListmodel {
 
-    private String[] neighList;
+    private int[] neighList;
     private int[] friendshipList;
 
-    public neighborListModel(String[] neighList, int[] friendshipList) {
+    public NeighborListmodel(int[] neighList, int[] friendshipList) {
         this.neighList = neighList;
         this.friendshipList = friendshipList;
     }
 
-    public String getNeigh(int neighborCode) {
-        String neighborName;
+    public int getNeighbor(int nodeCode) {
+        int neighborCode;
 
-        if(neighborCode < neighList.length) neighborName = neighList[neighborCode];
-        else neighborName = null;
+        if (nodeCode < neighList.length) neighborCode = neighList[nodeCode];
+        else neighborCode = 0;
 
-        return neighborName;
+        return neighborCode;
     }
 
     public int getFriendshipList(int friendshipCode) {
         int friendship;
 
         if (friendshipCode < friendshipList.length) friendship = friendshipList[friendshipCode];
-        else  friendship = 0;
+        else friendship = 0;
 
         return friendship;
+    }
+
+    public int getNeighborLength() {
+        return neighList.length;
     }
 }
